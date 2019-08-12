@@ -1,1 +1,1 @@
-Web Landing Page project
+Web Landing Page project use HTML, CSS and Javascript
