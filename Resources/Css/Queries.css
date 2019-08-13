@@ -1,0 +1,129 @@
+/* Big talbet to 1200px */
+@media only screen and (max-width: 1200px){
+    html{
+        font-size: 16px;
+    }
+    .heading-main-box{
+        transform: translate(-30%, -55%);
+    }
+    .products-box .btn{
+        margin-left: 14%;
+    }
+}
+
+/* small talbet to big talbet from 768px to 1023px */
+@media only screen and (max-width: 1023px){
+    .logo{
+        font-size: 50%;
+        width: 70px;
+    }
+    .heading-main-box{
+        transform: translate(-20%, -55%);
+    }
+    .products-box{
+        margin-left: 5%;
+    }
+    .products-box ul{
+        margin-left: -5%;
+        font-size: 90%;
+    }
+    .products-box .btn{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .information li i{
+        display: block;  
+    }
+    .information li {
+        text-align: center;
+    }
+    .social-icon{
+        width: 110%;
+        margin-left: 5%;
+    }
+    form{
+        width: 60%;
+        margin-left: 30%;
+    }
+}
+
+/* Small phones to small talbets */
+@media only screen and (max-width: 767px){
+    /* HEADING */
+    .logo{
+        width: 60px;
+    }
+    .main-nav{
+        visibility: hidden;
+        /* an element */
+    }
+    .heading-main-box{
+        font-size: 80%;
+        transform: translate(-15%, -55%);
+    }
+    .heading-main-box .btn{
+        width: 12%;
+        margin-left: 2%;
+    }
+
+    /* ABOUT SECTION */
+    .about-picture img{
+        width: 70%;
+        margin-left: 15%;
+        margin-bottom: 20px;
+        
+    }
+    .p-long{
+        font-size: 100%;
+    }
+    .about-section{
+        height: 150vh;
+    }
+
+    /* PRODUCTS SECTION */
+    .products-box{
+        width: 60%;
+        margin-left: 20%;
+        margin-bottom: 30px;
+    }
+    .products-box ul{
+        margin-left: 7%;
+    }
+    .products-box .btn{
+        margin-top: 35px;
+    }
+
+    /* TESTIMONIALS SECTION */
+    blockquote{
+        width: 90%;
+        margin-left: 5%;
+        margin-bottom: 60px;
+    }
+    .testimonials-section{
+        height: 120vh;
+    }
+
+    /* CONTACT SECTION */
+    .social-icon{
+        width: 90%;
+        font-size: 90%;
+        margin-left: 25%;
+    }
+    form{
+        width: 80%;
+        margin-left: 10%;
+    }
+    form label{
+        margin-left: 40%;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+    .contact-section{
+        height: 130vh;
+    }
+}
+
+/* Small phones from 0px to 480px */
+@media only screen and (max-width: 480px){
+    
+}
