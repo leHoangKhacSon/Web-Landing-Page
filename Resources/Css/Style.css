@@ -1,0 +1,514 @@
+/*-------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------DEFAULT SETUP--------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    /* mac dinh la 16px */
+    color: #B1A296;
+    background-color: #5d5c61;
+    text-rendering: optimizeLegibility;
+}
+
+body{
+    overflow-x: hidden;
+}
+/* xoa thanh cuon ngang x (y la cuon doc) */
+/* delete scroll bar */
+
+/*-------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------REUSE COMPONENT-----------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
+.btn{
+    text-decoration: none;
+    color: white;
+    background-color: #e67e22;
+    padding: 15px 20px;
+    border-radius: 20px;
+    /* tao vien cong */
+    margin: 0 5px;
+    width: 190px;
+    display: inline-block;
+    /* dung de co the can chinh trong inline */
+    text-align: center;
+    /* can chinh text */
+    transition: all .3s;
+    /* thoi gian hieu ung */
+    
+}
+
+.btn:hover,
+.btn:active{
+    background-color: orangered;
+}
+
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row{
+    /* width: 1140px; */
+    margin: 0 auto;
+}
+
+h1{
+    text-transform: uppercase;
+    /* chuyen tat ca thanh chu in hoa*/
+    font-size: 300%;
+    font-weight: 400;
+    letter-spacing: 1px;
+    /* khoang cach giua cac ki tu */
+    word-spacing: 1px;
+    /* khoang cach giua cac chu */
+    color: white;
+    line-height: 135%;
+    /* khoang cach giua cac dong */
+    margin-bottom: 50px;
+}
+
+h2{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #e67e22;
+    font-size: 180%;
+    font-weight: 700px;
+    text-align: center;
+}
+
+h2::after{
+    content: "";
+    display: block;
+    width: 150px;
+    height: 2px;
+    background-color: #da9c67;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+.p-long{
+    text-align: center;
+    color: #B1A296;
+    font-size: 22px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.about-section{
+    padding: 50px;
+    height: 100vh;
+}
+
+.small-icon{
+    color: rgb(59, 59, 163);
+    margin-right: 3%;
+    font-size: 150%;
+}
+
+/*-------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------HEADER-----------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
+.logo{
+    width: 100px;
+    float: left;
+    
+}
+
+header{
+    background-image: linear-gradient(45deg, rgba(115,149,174, 0.8),rgba(85,122,149,0.85)), url("../Img/background.jpg");
+    /* linear-gradient dung de phoi mau */
+    background-size: cover;
+    /* hinh se bao trum giao dien hien thi */
+    background-position: center;
+    height: 100vh;
+    /* vh = view height */
+    background-attachment: fixed;
+} 
+
+
+
+.main-nav{
+    float: right;
+    list-style: none;
+    margin-right: 20px;
+    margin-top: 20px;
+    /* doi style li thanh none */
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-right: 20px;
+    /* khoang cach giua cac the li */
+}
+
+.main-nav li a{
+    text-decoration: none;
+    color: white;
+    font-size: 120%;
+    font-weight: 500px;
+    transition: border-bottom 0.5s;
+    /* do tre cua border-bottom */
+}
+
+.main-nav li a:hover{
+    border-bottom: 2px solid white;
+}
+/* hieu ung khi di chuot vao */
+
+.main-nav li a:active{
+    border-bottom: 2px solid white;
+}
+/* hieu ung khi click chuot */
+
+.heading-main-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -55%);
+    width: 1140px;
+}
+
+/*-------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------ABOUT SECTION---------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
+
+.about-picture{
+    position: relative;
+}
+
+.about-picture img{
+    width: 85%;
+    border-radius: 20px;
+    border: 4px solid #6b657c;
+    box-shadow: 0px 2px 15px 5px #706b85;
+    /* x - y - do mo - do phong rong * mau */
+    transition: all .8s;
+    
+}
+
+.picture-title{
+    color: #302268;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-65%, 100%);
+    opacity: 0;
+    /* do mo 0 la trong suot 1 la binh thuong */
+    transition: all .8s;
+}
+
+.about-picture :hover.picture-title, 
+.about-picture :active.picture-title{
+    transform: translate(-65%, -50%);
+    opacity: 1;
+}
+
+.about-picture:hover img,
+.about-picture:active img{
+    filter:blur(1px) brightness(70%)
+    /* blur do mo, brightness do sang */
+}
+
+/*-------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------PRODUCT SECTION-------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
+
+.products-section{
+    background-color: #656081;
+}
+
+.products-section h2{
+    margin-bottom: 60px;
+}
+
+h3{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    background-color: #706b85;
+    color: white;
+    font-size: 100%;
+    font-weight: 400;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    /* lam cong hai goc tren trai phai */
+}
+
+.products-box ul li{
+    margin-left: 25%;
+    list-style: none;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 80%;
+}
+
+.products-box{
+    background-color: #5f5b75;
+    box-shadow: 3px 5px 10px #686483;
+    width: 80%;
+    height: 300px;  
+}
+
+.products-price{
+    margin-top: 10px;
+    font-size: 150%;
+    font-weight: 300;
+    text-align: center;
+}
+
+.products-price span{
+    font-size: 80%;
+    font-weight: 200;
+}
+
+.products-box ul li, 
+.products-price{
+    color:whitesmoke;
+}
+
+.products-box .btn{
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+/*-------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------TESTIMONIALS SECTION--------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
+
+.testimonials-section{
+    background-image: linear-gradient(45deg, rgba(115,149,174, 0.1),rgba(85,122,149,0.85)), url("../Img/background.jpg");
+    background-size: cover;
+    /* nen full man hinh */
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.row h2{
+    margin-bottom: 80px;
+}
+
+blockquote{
+    font-style: italic;
+    color: whitesmoke;
+    position: relative;
+}
+
+blockquote p{
+    line-height: 150%;
+    margin-bottom: 20px;
+}
+
+blockquote::before{
+    content: "\201C";
+    /* lay ki tu dac biet o link https://css-tricks.com/snippets/html/glyphs/ */
+    display: block;
+    font-size: 400%; 
+    position: absolute;
+    top: -45px;
+    left: -15px;
+}
+
+cite{
+    font-size: 90%;
+    color: rgb(207, 186, 169);
+    display: block;
+}
+
+cite img{
+    width: 20%;
+    border-radius: 50%;
+    border: 2px solid blanchedalmond;
+    vertical-align: middle;
+    /* chinh chu o giua so vo element */
+}
+
+/*-------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------SPONSOR SECTION--------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
+
+.sponsors-section{
+    background-image: linear-gradient(45deg, rgba(138, 174, 199, 0.8),rgba(101, 141, 136, 0.85)), url("../Img/logo1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.sponsors-section h2{
+    margin-bottom: 70px;
+}
+
+.sponsors-showcase{
+    margin-left: 10%;
+}
+
+.sponsors-showcase li{
+    list-style: none;
+    float: left;
+    width: 30%;
+    text-align: center;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.logo-sponsors{
+    width: 140px;
+    transition: all .5s;
+}
+
+figcaption{
+    color: #644d39;
+    font-size: 130%;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.sponsors-showcase li .logo-sponsors:hover,
+.sponsors-showcase li .logo-sponsors:active{
+   transform: scale(1.2);
+   /* phong kich thuoc len 1.2 */
+}
+
+/*-------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------CONTACT FORM-----------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
+
+.contact-section{
+    background-image: linear-gradient(45deg, rgba(115,149,174, 0.8),rgba(85,122,149,0.85)), url("../Img/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.information{
+    color: whitesmoke;
+    list-style: none;
+    line-height: 200%;
+    margin-top: 60px;
+    word-spacing: 1px;
+    font-size: 80%;
+    margin-left: 40px;
+}
+
+.information .small-icon{
+    color: #6351a8;
+    vertical-align: middle;
+}
+
+.information .small-icon:hover,
+.information .small-icon:active{
+    transform: scale(1.3);
+}
+
+.social-icon{
+    margin-top: 50px;
+    list-style: none;
+    margin-left: 50px;
+}
+
+.social-icon li{
+    display: inline-block;
+    font-size: 250%;
+    margin-left: 20px;
+}
+
+.social-icon li i{
+    color: whitesmoke;
+    transition: all .5s;
+    cursor: pointer;
+    /* doi kieu chuot thanh ban tay */
+}
+
+.social-icon li i:hover,
+.social-icon li i:active{
+    color: #e67e22;
+    transform: scale(1.5);
+}
+/*form*/
+form{
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 50%;
+    margin-left: 40%;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+label{
+    font-size: 150%;
+    color: whitesmoke;
+}
+
+form .row{
+    margin-bottom: 20px;
+}
+
+input, textarea{
+    outline: none;
+    /* vien ke ben ngoai cua input va textarea */
+    padding: 10px;
+    background-color: rgba(65, 62, 62, 0.4);
+    border: 1px solid rgba(20, 20, 20, 0.5);
+    margin-left: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type = "text"], input[type = "email"], textarea{
+    width: 85%;
+    font-size: 100%;
+    transition: all .3s;
+}
+
+input[type = "text"]:focus, input[type = "email"]:focus, textarea:focus{
+    color: whitesmoke;
+    background-color: rgba(65, 62, 62, 0.8);
+}
+/* focus hoat dong tro chuot vao chuan bi danh chu */
+
+input{
+    height: 50px;
+}
+
+textarea{
+    resize: none;
+    /* */
+    height: 100px;
+}
+
+form .row:last-child{
+    text-align: center;
+}
+/* last-child la phan tu cuoi- nghia la chon phan tu row cuoi cung cua phan tu form */
+
+input[type="submit"]{
+    font-weight: 700;
+    border-radius: 5px;
+    font-size: 100%;
+    width: 60%;
+}
+/* chi chinh input voi type = submit */
+
+
+/*-------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------FOOTER-----------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
+
+footer{
+    background-color: #B1A296;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 80%;
+    font-weight: 400;
+    padding: 20px;
+}
+
